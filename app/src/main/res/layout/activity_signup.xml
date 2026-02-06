@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/signupraw">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <!-- Already have an account? (sits above form) -->
+        <TextView
+            android:id="@+id/loginRedirectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textColor="#C87F04"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/formContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FORM CONTAINER -->
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_box_blue"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- EMAIL HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PROVIDE AN EMAIL ADDRESS"
+                android:textColor="#D32F2F"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_box_gray"
+                android:padding="9dp"
+                android:text="• Ensure that you have access to this email address.\n• The email address you provide will be used for future updates and notices."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <!-- EMAIL LABEL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Email Address"
+                android:textColor="#303F9F"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- EMAIL INPUT -->
+            <EditText
+                android:id="@+id/signupEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_box_white"
+                android:hint="Enter your email"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+
+            <!-- PASSWORD HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="MAKE A SECURE PASSWORD"
+                android:textColor="#C2185B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- PASSWORD LABEL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Password"
+                android:textColor="#2E7D32"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- PASSWORD INPUT -->
+            <EditText
+                android:id="@+id/signupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_box_white"
+                android:hint="Enter your password"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+
+            <!-- CONFIRM PASSWORD LABEL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Confirm Password"
+                android:textColor="#2E7D32"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- CONFIRM PASSWORD INPUT -->
+            <EditText
+                android:id="@+id/signupConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_box_white"
+                android:hint="Confirm password"
+                android:drawableLeft="@drawable/baseline_password_24"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+
+            <!-- SIGN UP BUTTON -->
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:text="Sign Up"
+                android:textSize="18sp" />
+
+            <!-- PRIVACY POLICY -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Privacy Policy"
+                android:textColor="#000"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

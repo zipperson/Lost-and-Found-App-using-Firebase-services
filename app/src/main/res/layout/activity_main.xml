@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/rawbg"
+        android:layout_height="match_parent">
+
+        <!-- MAIN CONTENT -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/topToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@color/fui_transparent"
+                android:paddingHorizontal="12dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- BURGER BUTTON -->
+                    <ImageButton
+                        android:id="@+id/btn_toggle_visible"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+
+                        android:background="@android:color/transparent"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_custom_burger"
+                        android:contentDescription="Menu" />
+
+                    <!-- SPACING -->
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+                    <!-- SEARCH BAR (REAL EditText) -->
+                    <EditText
+                        android:id="@+id/searchBar"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/searchbar"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="40dp"
+                        android:hint="Search items..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#AA000000" />
+
+                    <!-- SEARCH ICON ON THE RIGHT -->
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+            <!-- fragment container -->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- LEFT VERTICAL MENU (drawer) -->
+        <LinearLayout
+            android:id="@+id/nav_drawer"
+            android:layout_width="92dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="start"
+            android:background="@drawable/rounded_drawer_bg"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:clipToOutline="true">
+
+
+            <!-- logo -->
+            <ImageButton
+                android:id="@+id/btn_nav_user"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/avatar_1"
+                android:contentDescription="Lost" />
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_lost"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_lost"
+                android:contentDescription="Lost" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_found"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_found"
+                android:contentDescription="Found" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_claimed"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_claimed"
+                android:contentDescription="Claimed" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_donated"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_donated"
+                android:contentDescription="Claimed" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_submit"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Submit" />
+
+            <ImageButton
+                android:id="@+id/btn_questions"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_questions"
+                android:contentDescription="Submit" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_pending"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_admin"
+                android:contentDescription="Pending (admin)" />
+
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_nav_toggle"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_togglemenu"
+                android:contentDescription="Toggle drawer" />
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>

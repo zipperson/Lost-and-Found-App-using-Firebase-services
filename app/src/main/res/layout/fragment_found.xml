@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/found_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Title -->
+        <ImageView
+            android:id="@+id/foundTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/found_text"
+            android:contentDescription="Found Items" />
+
+        <!-- RecyclerView container -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/foundRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="true"
+            android:padding="12dp"
+            android:background="@drawable/rounded_box_blue"/>
+
+    </LinearLayout>
+</FrameLayout>

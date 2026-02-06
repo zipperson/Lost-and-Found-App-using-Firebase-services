@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <EditText
+        android:id="@+id/edtFoundBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your name (optional)" />
+
+    <EditText
+        android:id="@+id/edtFoundLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location found (optional)"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/edtFoundDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date found (YYYY-MM-DD) optional"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

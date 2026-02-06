@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/rounded_box_blue"
+    android:gravity="top"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/submitclaimTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/submitclaimtitle"/>
+
+    <EditText
+        android:id="@+id/edtLostItemDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_white"
+        android:padding="10dp"
+        android:layout_marginBottom="12dp"
+        android:hint= "Details of Lost Item" />
+
+    <EditText
+        android:id="@+id/edtLostItemLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_white"
+        android:padding="10dp"
+        android:layout_marginBottom="12dp"
+        android:hint= "Location Lost" />
+
+    <EditText
+        android:id="@+id/edtLostItemDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_white"
+        android:padding="10dp"
+        android:layout_marginBottom="12dp"
+        android:hint= "Date Lost " />
+
+    <EditText
+        android:id="@+id/edtOwnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_white"
+        android:padding="10dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Your name" />
+
+    <EditText
+        android:id="@+id/edtGradeSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box_white"
+        android:padding="10dp"
+        android:hint="Grade / Section"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnCancelClaim"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="CANCEL"
+            android:textAllCaps="true">
+
+        </Button>
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnConfirmClaim"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="CONFIRM"
+            android:textAllCaps="true">
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
+

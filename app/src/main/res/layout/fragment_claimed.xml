@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/claimed_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/claimedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@color/headingBlue"
+            android:src="@drawable/claimed_text"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/claimedRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:padding="12dp"
+            android:background="@drawable/rounded_box_blue"/>
+
+    </LinearLayout>
+</FrameLayout>

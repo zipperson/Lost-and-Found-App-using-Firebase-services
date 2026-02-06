@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/donatedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@color/headingBlue"
+        android:src="@drawable/donated_text"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donatedRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="true"
+        android:padding="12dp"
+        android:background="@drawable/rounded_box_blue"/>
+</LinearLayout>

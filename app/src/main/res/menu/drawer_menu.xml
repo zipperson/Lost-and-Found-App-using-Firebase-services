@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_lost"
+        android:title="Lost Items"
+        android:icon="@drawable/ic_lost" />
+
+    <item
+        android:id="@+id/nav_found"
+        android:title="Found Items"
+        android:icon="@drawable/ic_found" />
+
+    <item
+        android:id="@+id/nav_pending"
+        android:title="Pending (Admin)"
+        android:icon="@drawable/ic_admin" />
+
+</menu>
