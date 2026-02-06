@@ -15,3 +15,15 @@
 local.properties
 /google-services.json
 .idea/
+# Firebase
+app/google-services.json
+# Android Studio
+# Keys
+*.jks
+*.keystore
+*.p12
+# Secrets
+*.env
+*.pem
+*.key
+secrets/
